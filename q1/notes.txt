@@ -1,0 +1,26 @@
+Notes:
+1. The RDD version uses the low-level Spark API and requires more manual processing.
+
+2. The DataFrame versions (both CSV and Parquet) are more concise and leverage Spark SQL's optimized operations.
+
+3. The Parquet version will typically be faster than the CSV version as Parquet is a columnar storage format optimized for Spark.
+
+4. All versions:
+
+    - Filter out records with zero coordinates
+
+    - Extract the hour from the pickup datetime
+
+    - Calculate average coordinates per hour
+
+    - Sort by hour
+
+5. The scripts include timing measurements to compare performance between approaches.
+
+6. Make sure to adjust the paths if needed based on your actual HDFS configuration.
+
+You can save these scripts as separate .py files and submit them to Spark using spark-submit. For example:
+
+spark-submit q1_rdd_csv.py
+spark-submit q1_sql_df_csv.py
+spark-submit q1_sql_df_parquet.py
