@@ -18,7 +18,7 @@ trips_2024 = spark.read.csv(
 )
 
 taxi_zones = spark.read.csv(
-    "hdfs:///user/alopix/processed/taxi_zone_lookup.csv",
+    "hdfs://hdfs-namenode:9000/data/taxi_zone_lookup.csv",
     header=True,
     inferSchema=True
 )
