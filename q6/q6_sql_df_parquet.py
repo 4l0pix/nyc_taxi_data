@@ -12,11 +12,11 @@ start_time = time.time()
 
 # Load data from HDFS
 trips_2024 = spark.read.parquet(
-    "hdfs:///user/alopix/processed/yellow_tripdata_2024-01.parquet"
+    "hdfs://hdfs-namenode:9000/data/yellow_tripdata_2024"
 )
 
 taxi_zones = spark.read.parquet(
-    "hdfs:///user/alopix/processed/taxi_zone_lookup.parquet"
+    ""hdfs://hdfs-namenode:9000/data/taxi_zone_lookup"
 )
 
 # Join with borough information
