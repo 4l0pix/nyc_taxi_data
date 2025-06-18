@@ -29,7 +29,7 @@ spark = SparkSession.builder \
 start_time = time.time()
 
 # Load Parquet data
-parquet_path = "hdfs:///user/alopix/processed/yellow_trip_data_2015-01.parquet"
+parquet_path = ""hdfs://hdfs-namenode:9000/data/yellow_tripdata_2015" 
 df_parquet = spark.read.parquet(parquet_path)
 
 # Calculate distance and duration
