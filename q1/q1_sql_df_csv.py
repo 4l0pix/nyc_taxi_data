@@ -11,7 +11,7 @@ spark = SparkSession.builder \
 start_time = time.time()
 
 # Load CSV data
-csv_path = "hdfs:///user/alopix/processed/yellow_tripdata_2015-01.csv"
+csv_path = = "hdfs://hdfs-namenode:9000/data/yellow_tripdata_2015.csv"
 df_csv = spark.read.csv(csv_path, header=True, inferSchema=True)
 
 # Process data
