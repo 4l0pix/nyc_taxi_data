@@ -11,7 +11,7 @@ spark = SparkSession.builder \
 start_time = time.time()
 
 # Load Parquet data
-parquet_path = "hdfs://hdfs-namenode:9000/user/akoukosias/data/parquet/"
+parquet_path = "hdfs://hdfs-namenode:9000/user/akoukosias/data/parquet/yellow_tripdata_2015"
 df_parquet = spark.read.parquet(parquet_path)
 
 # Process data
