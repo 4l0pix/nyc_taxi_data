@@ -10,7 +10,7 @@ sc = SparkContext(conf=conf)
 start_time = time.time()
 
 # Load data from HDFS
-trips_path = "hdfs:///user/alopix/processed/yellow_tripdata_2024-01.csv"
+trips_path = "hdfs://hdfs-namenode:9000/data/yellow_tripdata_2024.csv",
 
 # Load and process trips data
 trips_header = sc.textFile(trips_path).first()
