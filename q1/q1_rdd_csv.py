@@ -11,7 +11,7 @@ sc = SparkContext(conf=conf)
 start_time = time.time()
 
 # Load the CSV file from HDFS
-input_path = "hdfs:///user/alopix/processed/yellow_tripdata_2015-01.csv"
+input_path = "hdfs://hdfs-namenode:9000/data/yellow_tripdata_2015.csv"
 taxi_data = sc.textFile(input_path)
 
 # Remove header and filter out records with zero coordinates
