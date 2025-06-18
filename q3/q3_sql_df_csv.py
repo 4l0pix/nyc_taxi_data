@@ -12,13 +12,13 @@ start_time = time.time()
 
 # Load data from HDFS
 trips_2024 = spark.read.csv(
-    "hdfs:///user/alopix/processed/yellow-tripdata-2024-01.csv",
+    "hdfs://hdfs-namenode:9000/data/yellow_tripdata_2024.csv",
     header=True,
     inferSchema=True
 )
 
 taxi_zones = spark.read.csv(
-    "hdfs:///user/alopix/processed/taxi_zone_lookup.csv",
+    "hdfs://hdfs-namenode:9000/data/taxi_zone_lookup.csv",
     header=True,
     inferSchema=True
 )
